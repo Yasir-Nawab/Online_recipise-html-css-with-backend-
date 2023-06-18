@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Home-Page</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.png" width="50px">
+        </div>
+        <div>
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/catagory">Catagories</a></li>
+                <li><a href="/submit-recipe">Submit Recipe</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form action="/search" method="post" class="srch">
+            <input type="search" name="searchTerm" id="search-bar" placeholder="Search Here">
+        </form>
+    </div>
+ <!-- Hero-Section -->
+    <section class="hero">
+        <div class="hero-img">
+            <img src="/img/hero-img.jpg">
+        </div>
+        <div class="hero-text">
+            <h1>WellCome...</h1>
+            <h3>We are offering quality food<br>With crunchy<span>Taste</span> </h3>
+        </div>
+    </section>
+
+    <!-- Catagories Section -->
+    <section class="catagory">
+        <div class="headings"><h1>Catagory</h1>
+        <a href="/catagory"><h1 class="more">More Catarogies</h1></a></div>
+        <div class="catagory_data">
+
+
+            <% show.forEach(function(firstModel,index){ %>
+            <a href="/catagory"><div class="catagory-img">
+                <img src="/img/<%-firstModel.image%>" width="100px">
+                <h4><%-firstModel.name%></h4>
+            </div></a>
+            <%})%>
+
+            <!-- <div class="catagory-img">
+                <img src="./img/pakistani-food.jpg" width="100px">
+                <h4>Pakistani</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/turkey-food.jpg" width="100px">
+                <h4>Turkish</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/spanish-food.jpg" width="100px">
+                <h4>Spanish</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/American-food.jpg" width="100px">
+                <h4>American</h4>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Latest-Section -->
+    <section class="latest">
+        <h1>Latest Recipes</h1>
+        <div class="catagory_data">
+            <div class="catagory-img latest-img">
+                <img src="/img/dumpukht.jpg" width="100px">
+                <!-- <h4>Pakistani</h4> -->
+            </div>
+
+            <div class="catagory-img latest-img">
+                <img src="/img/kabab.jpg" width="100px">
+                <!-- <h4>Turkish</h4> -->
+            </div>
+
+            <div class="catagory-img latest-img">
+                <img src="/img/karachi_halwa.webp" width="100px">
+                <!-- <h4>Spanish</h4> -->
+            </div>
+
+            <div class="catagory-img latest-img">
+                <img src="/img/peshwri_naan.jpg" width="100px">
+                <!-- <h4>American</h4> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Adding-Section -->
+    <section class="add">
+        <h1>Add Recipe</h1>
+        <a href="/submit-recipe"><button type="submit">Click to add</button></a>
+    </section>
+
+
+    <!-- Footer-Section -->
+    <div class="footer">
+        <div class="services">
+            <h1>SERVICES</h1>
+            <p>Catagory</p>
+            <p>Latest</p>
+            <p>Add Recipe</p>
+        </div>
+
+        <div class="services">
+            <h1>CATAGORIES</h1>
+            <p>Pakistani</p>
+            <p>Turkish</p>
+            <p>Spanish</p>
+            <p>American</p>
+        </div>
+
+        <div class="services">
+            <h1>CONTACT</h1>
+            <p>Email: yasirnawab444@gmail.com</p>
+            <p>Phone: 0317-5154487</p>
+            <p>Wattsapp: 0347-8683097</p>
+        </div>
+        
+    </div>
+</body>
+
+</html>

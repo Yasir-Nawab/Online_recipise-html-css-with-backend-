@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/search.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.png" width="50px">
+        </div>
+        <div>
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/catagory">Catagories</a></li>
+                <li><a href="/submit-recipe">Submit Recipe</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form action="/search" method="post" class="srch">
+            <input type="search" name="searchTerm" id="search-bar" placeholder="Search Here">
+        </form>
+    </div>
+
+
+    <!-- Search-Results Section -->
+    <div class="srcc">
+        <h1>SEARCH RESULTS</h1>
+    </div>
+    <section class="catagory">
+        <h1>catagories</h1>
+        <div class="catagory_data">
+            <%recipe.forEach(function(secondModel,index){ %>
+                <div class="catagory-img">
+                    <a href="/recipe/<%= secondModel._id%>"><img src="./img/<%-secondModel.image%>" width="100px"></a>
+                    <h4>
+                        <%-secondModel.name%>
+                    </h4>
+                </div>
+                <%})%>
+        </div>
+    </section>
+</body>
+
+</html>

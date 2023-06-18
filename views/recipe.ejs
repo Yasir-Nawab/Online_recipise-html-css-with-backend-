@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recipe.css">
+    <title>Your-Recipe</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.png" width="50px">
+        </div>
+        <div>
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/catagory">Catagories</a></li>
+                <li><a href="/submit-recipe">Submit Recipe</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form action="/search" method="post" class="srch">
+            <input type="search" name="searchTerm" id="search-bar" placeholder="Search Here">
+        </form>
+    </div>
+
+
+    <!-- Item-Information Section -->
+    <% if( show3 !=null ){ %>
+        <div class="item">
+            <div class="img">
+                <img src="/img/<%= show3.image %>" alt="">
+            </div>
+            <div class="information">
+                <h1>
+                    <%= show3.name %>
+                </h1>
+                <p>discription: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo id molestias earum, iusto
+                    animi aliquam quae adipisci voluptate expedita vero, tempore tenetur obcaecati quas aspernatur enim
+                    non repudiandae. Est id fuga suscipit illo? Voluptate?</p>
+                <h4>recipe</h4>
+                <p>Lorem ipsum dolor sit amet. <br>
+                    Lorem ipsum dolor sit. <br>
+                    Lorem, ipsum dolor. <br>
+                    Lorem, ipsum. <br>
+                    lorem
+                </p>
+            </div>
+        </div>
+        <% } %>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/catagories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>ALL-CATAGORIES</title>
+</head>
+<body>
+    <!-- navigation bar -->
+    <div class="header">
+        <div class="logo">
+            <img src="./img/logo.png" width="50px">
+        </div>
+        <div>
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/catagory">Catagories</a></li>
+                <li><a href="/submit-recipe">Submit Recipe</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form action="/search" method="post" class="srch">
+            <input type="search" name="searchTerm" id="search-bar" placeholder="Search Here">
+        </form>
+    </div>
+
+
+
+    <!-- catagory section -->
+    <section class="catagory">
+        <h1>catagories</h1>
+        <div class="catagory_data">
+            <%show2.forEach(function(secondModel,index){ %>
+                <div class="catagory-img">
+                    <a href="/recipe/<%= secondModel._id%>"><img src="./img/<%-secondModel.image%>" width="100px"></a>
+                    <h4><%-secondModel.name%></h4>
+                </div>
+                <%})%>
+
+
+            <!-- <div class="catagory-img">
+                <img src="./img/pakistani-food.jpg" width="100px">
+                <h4>Pakistani</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/turkey-food.jpg" width="100px">
+                <h4>Turkish</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/spanish-food.jpg" width="100px">
+                <h4>Spanish</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/American-food.jpg" width="100px">
+                <h4>American</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/body-background.jpg" width="100px">
+                <h4>Chinese</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/dumpukht.jpg" width="100px">
+                <h4>Afhani</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/karachi_halwa.webp" width="100px">
+                <h4>Karachi</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/hero-img.jpg" width="100px">
+                <h4>Rawalpindi</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/American-food.jpg" width="100px">
+                <h4>Arabic</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/turkey-food.jpg" width="100px">
+                <h4>Vegiterian</h4>
+            </div>
+
+
+            <div class="catagory-img">
+                <img src="./img/peshwri_naan.jpg" width="100px">
+                <h4>Fruits</h4>
+            </div>
+
+            <div class="catagory-img">
+                <img src="./img/dumpukht.jpg" width="100px">
+                <h4>Peshawari</h4>
+            </div> -->
+        </div>
+    </section>
+</body>
+</html>

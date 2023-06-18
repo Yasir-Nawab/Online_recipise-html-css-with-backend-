@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/submitRecipe.css">
+    <title>Recipe-Recipe</title>
+</head>
+<body>
+    <!-- navigation bar -->
+    <div class="header">
+        <div class="logo">
+            <img src="/img/logo.png" width="50px">
+        </div>
+        <div>
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/catagory">Catagories</a></li>
+                <li><a href="/submit-recipe">Submit Recipe</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <form action="/search" method="post" class="srch">
+            <input type="search" name="searchTerm" id="search-bar" placeholder="Search Here">
+        </form>
+    </div>
+    
+
+    <!-- submit-Body Section -->
+    <div class="heading">
+        <h1>Submit Your Recipe</h1>
+        <p>Share your amazing recipe with thousands of web developer across the <br> world. Fill our form to get started...</p>
+    </div>
+
+    <div class="yr">
+        <form action="/submit-recipe" method="POST">
+
+            <div class="col">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="col">
+                <label for="name">Recipe-Name</label>
+                <input type="text" name="namer" id="name">
+            </div>
+            <div class="col">
+                <label for="discription">Discription</label>
+                <textarea name="discription" id="discription" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col">
+                <label for="ingrediants">Ingrediants</label><br>
+                <small>Example:Ice</small>
+                <div class="ingrediantList">
+                    <div class="ingrediantDiv">
+                        <input type="text" name="ingrediants">
+                    </div>
+                </div>
+            </div>
+            <div class="col in">
+                <button type="button" id="addIngrediantsBtn">+ Ingrediant</button>
+            </div>
+            <div class="col">
+                <label for="catagory">Select-Catagory</label>
+                <select name="catagory" aria-label="catagory">
+                    <option selected>select catagory</option>
+                    <option value="Pakistani">Pakistani</option>
+                    <option value="Afghani">Afghani</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="American">American</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="image">Product-Image</label>
+                <input type="file" name="image" accept="image/*">
+            </div>
+            <div class="col">
+                <label for="image">Product-Image</label>
+                <input type="text" name="imagei">
+            </div>
+            <div class="col">
+                <button type="submit">Submit-Recipe</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
